@@ -1,0 +1,150 @@
+body {
+	background: #fffdf0;
+}
+
+.container {
+	width: 375px;
+	height: 600px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+#frame3 {
+	height: 600px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 3;
+	opacity: 0;
+	animation: frame3_fade 3s cubic-bezier(1,1,1,4);
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+}
+@keyframes frame3_fade{
+	0% {opacity:0;}
+	100% {opacity: 1;}
+}
+#frame2 {
+	width: 375px;
+	height: 600px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 2;
+	opacity: 0;
+	animation: frame2_fade 3s cubic-bezier(1,1,1,4);
+	animation-fill-mode: forwards;
+	animation-delay: 0s;
+}
+@keyframes frame2_fade{
+	0% {opacity:0;}
+	100% {opacity: 1;}
+}
+#frame1 {
+	width: 375px;
+	height: 600px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+}
+#frame4 {
+	width: 375px;
+	height: 600px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 5;
+	opacity: 1;
+	animation: frame4_fade 3s infinite linear;
+	animation-fill-mode: forwards;
+	animation-delay: 0s;
+}
+@keyframes frame4_fade{
+	0%, 100% {opacity:0;}
+	50% {opacity: 1;}
+}
+#name {
+	font-family: 'Libre Baskerville', serif;
+	position: absolute;
+	left: 35%;
+	top: 560px;
+	animation: n_move 4s;
+	animation-fill-mode: forwards;
+	color: white;
+	z-index: 6;
+}
+@keyframes n_move {
+	100% { top: 529px; }
+	0% {top: 560px;}
+	0% {opacity:0;}
+	100% {opacity: 1;}
+}
+#fox {
+	position: absolute;
+	height: 38px;
+	top: 339px;
+	left: 158px;
+	z-index: 7;
+}
+#tail {
+	position: absolute;
+	height: 22px;
+	top: 345px;
+	left: 130px;
+	z-index: 7;
+	animation: t_move 2s infinite;
+	transform-origin: 100% 100%;
+	animation-delay: 1s;
+}
+@keyframes t_move {
+	0%, 100% {transform: rotate(-15deg);}
+	50% {transform: rotate(30deg);}
+}
+#legs1 {
+	position: absolute;
+	height: 26px;
+	top: 363px;
+	left: 146px;
+	z-index: 7;
+	animation: legs1_fade 2s infinite;
+	animation-fill-mode: forwards;
+}
+@keyframes legs1_fade{
+	0%, 100% {opacity:0;}
+	50% {opacity: 1;}
+}
+#legs2 {
+	position: absolute;
+	height: 27px;
+	top: 358px;
+	left: 141px;
+	z-index: 7;
+	animation: legs2_fade 2s infinite;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+	opacity: 0;
+}
+@keyframes legs2_fade{
+	0%, 100% {opacity:0;}
+	50% {opacity: 1;}
+}
+#white {
+	position: absolute;
+	height: 79px;
+	top: 319px;
+	left: 87px;
+	z-index: 8;
+}
+#white:hover {
+	opacity: 0;
+	transition: 1s;
+	transition-delay: .2s;
+}
+
+
+
+
+
+
